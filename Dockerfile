@@ -49,4 +49,5 @@ WORKDIR ${HOME}
 
 COPY --from=build /root/go/bin/ /usr/local/bin/
 COPY --from=build /dist/integration/ /opt/theta/integration/
+ENTRYPOINT [ "/usr/local/bin/theta" ]
 
